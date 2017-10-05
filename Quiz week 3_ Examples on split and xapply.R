@@ -1,0 +1,11 @@
+## Key functions used in quiz number 3 that may be useful
+library(datasets)
+data("iris")
+data("mtcars")
+sapply(iris[which(iris$Species == "virginica"),],mean)
+apply(iris[,1:4],2, mean)
+apply(mtcars,2,mean)
+sapply(split(mtcars$mpg,mtcars$cyl), mean)
+tapply(mtcars$mpg, mtcars$cyl, mean)
+with(mtcars, tapply(mpg,cyl,mean))
+tapply(mtcars$hp, mtcars$cyl, mean)
